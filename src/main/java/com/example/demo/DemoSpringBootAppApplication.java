@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -14,8 +16,10 @@ public class DemoSpringBootAppApplication {
 
 }
 
+@Entity
 class Coffee {
-    private final String id;
+    @Id
+    private String id;
     private String name;
 
     public Coffee(String id, String name) {
@@ -27,12 +31,20 @@ class Coffee {
         this(UUID.randomUUID().toString(), name);
     }
 
+    public Coffee() {
+
+    }
+
     public String getId() {
         return id;
     }
 
     public String getName() {
         return name;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void setName(String name) {
