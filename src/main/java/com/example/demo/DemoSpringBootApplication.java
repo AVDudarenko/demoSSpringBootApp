@@ -4,14 +4,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
 import java.util.UUID;
 
 @SpringBootApplication
-public class DemoSpringBootAppApplication {
+@ConfigurationPropertiesScan
+public class DemoSpringBootApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoSpringBootAppApplication.class, args);
+        SpringApplication.run(DemoSpringBootApplication.class, args);
     }
 
 }
