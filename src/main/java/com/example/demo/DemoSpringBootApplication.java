@@ -24,6 +24,8 @@ class Coffee {
     private String id;
     private String name;
 
+    private String chyrka;
+
     public Coffee(String id, String name) {
         this.id = id;
         this.name = name;
